@@ -44,7 +44,6 @@ NAV = [
     ("index", "Главная"),
     ("services", "Услуги"),
     ("how", "Как работаем"),
-    ("works", "Работы"),
     ("contact", "Контакты"),
 ]
 LEGAL = [
@@ -580,48 +579,6 @@ def p_how():
             "Пятнадцать минут, чтобы понять, есть ли смысл. Ничего не обязывает.")))
 
 
-def p_works():
-    return page("works",
-        "Работы",
-        "Демо-проекты Valora: посадочная страница психолога и три гида-лид-магнита.",
-        """<section class="hero">
-  <div class="wrap">
-    <h1>Работы</h1>
-    <p class="lead">Здесь демо-проекты: они сделаны, чтобы показать, как выглядит наша работа с текстом и страницей. Имя специалиста, отзывы, цены и контакты в них вымышленные. Кейсы с рекламой появятся здесь, когда заказчики разрешат их показать.</p>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <article class="work">
-      <img class="work__img" src="img/work-opora.jpg" width="1200" height="760" alt="Первый экран посадочной страницы «Опора» — частная практика психолога" loading="lazy">
-      <div>
-        <p class="label">Посадочная страница</p>
-        <h3>«Опора» — частная практика психолога</h3>
-        <p>Одна страница с записью на встречу-знакомство, ответами на страхи перед первой сессией и гидом в обмен на контакт. Анонимные отзывы — потому что в психологии именные нарушают конфиденциальность.</p>
-        <div class="actions"><a class="btn btn--ghost" href="https://yamizxcq.github.io/opora-psy/" target="_blank" rel="noopener">Открыть страницу</a></div>
-      </div>
-    </article>
-    <article class="work">
-      <div class="guides">
-        <img src="img/work-guide-psy.jpg" width="600" height="1067" alt="Обложка гида для психолога" loading="lazy">
-        <img src="img/work-guide-realty.jpg" width="600" height="1067" alt="Обложка гида для агентства недвижимости" loading="lazy">
-        <img src="img/work-guide-school.jpg" width="600" height="1067" alt="Обложка гида для онлайн-школы" loading="lazy">
-      </div>
-      <div>
-        <p class="label">Лид-магниты</p>
-        <h3>Три гида для трёх ниш</h3>
-        <p>Психология, недвижимость, онлайн-школа — по 15 страниц, формат под экран телефона. Каждый отвечает на вопрос, который человек задаёт себе до покупки, и только потом рассказывает о продукте.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-{cta}""".format(cta=cta(
-            "Хотите такое же для своей ниши?",
-            "Напишите, чем занимаетесь, — покажем, как это выглядело бы у вас.")))
-
-
 def p_contact():
     return page("contact",
         "Контакты",
@@ -860,7 +817,7 @@ def p_consent():
 
 
 PAGES = {
-    "index": p_index, "services": p_services, "how": p_how, "works": p_works,
+    "index": p_index, "services": p_services, "how": p_how,
     "contact": p_contact, "payment": p_payment, "oferta": p_oferta,
     "privacy": p_privacy, "consent": p_consent,
 }

@@ -64,7 +64,7 @@ def trim(path):
     return im
 
 
-PAGES = ["index", "services", "how", "works", "contact",
+PAGES = ["index", "services", "how", "contact",
          "oferta", "payment", "privacy", "consent"]
 
 
